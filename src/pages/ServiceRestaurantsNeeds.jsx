@@ -7,11 +7,6 @@ const scalevariants = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const flipVariants = {
-  hidden: { opacity: 0, rotateY: -90 },
-  visible: { opacity: 1, rotateY: 0 },
-};
-
 const ServiceSignage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,30 +26,22 @@ const ServiceSignage = () => {
             to enhance your dining experience and leave a lasting impression on
             every guest.
           </p>
-          <div className="mx-auto grid w-full grid-cols-2 gap-2 md:grid-cols-4 md:gap-0 lg:w-5/6 lg:grid-cols-4 lg:gap-0">
+          <div className="mx-auto grid w-full grid-cols-2 gap-2 md:grid-cols-4 md:gap-0 lg:w-5/6 lg:grid-cols-2 lg:gap-8">
             <motion.div
-              className="overflow-hidden bg-white"
-              variants={flipVariants}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.5 }}
-              style={{ perspective: "1000px" }}
-              viewport={{ once: true }}
-            >
-              <img
-                src="/images/services/restaurant_needs/01.webp"
-                alt="salad icon"
-                className="h-56 w-full transform object-cover transition-transform duration-300 ease-in-out hover:scale-110 lg:h-80"
-              />
-            </motion.div>
-            <motion.div
-              className="flex flex-col justify-center bg-white"
+              className="flex flex-col bg-white"
               variants={scalevariants}
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
+              <div className="overflow-hidden bg-white">
+                <img
+                  src="/images/services/restaurant_needs/01.webp"
+                  alt="salad icon"
+                  className="h-56 w-full transform object-cover transition-transform duration-300 ease-in-out hover:scale-110 lg:h-[600px]"
+                />
+              </div>
               <div className="p-3 lg:p-7">
                 <h3 className="mb-2 text-center text-base font-semibold text-primary-500 lg:text-lg">
                   Caps
@@ -67,31 +54,23 @@ const ServiceSignage = () => {
               </div>
             </motion.div>
             <motion.div
-              className="overflow-hidden bg-white"
-              variants={flipVariants}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.5 }}
-              style={{ perspective: "1000px" }}
-              viewport={{ once: true }}
-            >
-              <img
-                src="/images/services/restaurant_needs/02.webp"
-                alt="salad icon"
-                className="h-56 w-full transform object-cover transition-transform duration-300 ease-in-out hover:scale-110 lg:h-80"
-              />
-            </motion.div>
-            <motion.div
-              className="flex flex-col justify-center bg-white"
+              className="flex flex-col bg-white"
               variants={scalevariants}
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
+              <div className="overflow-hidden bg-white">
+                <img
+                  src="/images/services/restaurant_needs/02.webp"
+                  alt="salad icon"
+                  className="h-56 w-full transform object-cover transition-transform duration-300 ease-in-out hover:scale-110 lg:h-[600px]"
+                />
+              </div>
               <div className="p-3 lg:p-7">
                 <h3 className="mb-2 text-center text-base font-semibold text-primary-500 lg:text-lg">
-                  Labels
+                  Tags & Labels
                 </h3>
                 <p className="text-center text-sm !leading-relaxed text-gray-900 lg:text-base">
                   Custom-designed labels, crafted to showcase your brand with
@@ -101,13 +80,20 @@ const ServiceSignage = () => {
               </div>
             </motion.div>
             <motion.div
-              className="flex flex-col justify-center bg-white"
+              className="flex flex-col bg-white"
               variants={scalevariants}
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
+              <div className="overflow-hidden bg-white">
+                <img
+                  src="/images/services/restaurant_needs/03.webp"
+                  alt="salad icon"
+                  className="h-56 w-full transform object-cover transition-transform duration-300 ease-in-out hover:scale-110 lg:h-[600px]"
+                />
+              </div>
               <div className="p-3 lg:p-7">
                 <h3 className="mb-2 text-center text-base font-semibold text-primary-500 lg:text-lg">
                   Tea Coasters
@@ -120,28 +106,20 @@ const ServiceSignage = () => {
               </div>
             </motion.div>
             <motion.div
-              className="overflow-hidden bg-white"
-              variants={flipVariants}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.5 }}
-              style={{ perspective: "1000px" }}
-              viewport={{ once: true }}
-            >
-              <img
-                src="/images/services/restaurant_needs/03.webp"
-                alt="salad icon"
-                className="h-56 w-full transform object-cover transition-transform duration-300 ease-in-out hover:scale-110 lg:h-80"
-              />
-            </motion.div>
-            <motion.div
-              className="flex flex-col justify-center bg-white"
+              className="flex flex-col bg-white"
               variants={scalevariants}
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
+              <div className="overflow-hidden bg-white">
+                <img
+                  src="/images/services/restaurant_needs/04.webp"
+                  alt="salad icon"
+                  className="h-56 w-full transform object-cover transition-transform duration-300 ease-in-out hover:scale-110 lg:h-[600px]"
+                />
+              </div>
               <div className="p-3 lg:p-7">
                 <h3 className="mb-2 text-center text-base font-semibold text-primary-500 lg:text-lg">
                   Food Boxes
@@ -152,21 +130,6 @@ const ServiceSignage = () => {
                   meal.
                 </p>
               </div>
-            </motion.div>
-            <motion.div
-              className="overflow-hidden bg-white"
-              variants={flipVariants}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.5 }}
-              style={{ perspective: "1000px" }}
-              viewport={{ once: true }}
-            >
-              <img
-                src="/images/services/restaurant_needs/04.webp"
-                alt="salad icon"
-                className="h-56 w-full transform object-cover transition-transform duration-300 ease-in-out hover:scale-110 lg:h-80"
-              />
             </motion.div>
           </div>
         </div>

@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+import AboutUs from "./pages/AboutUs";
 import ServiceBags from "./pages/ServiceBags";
 import ServiceFlags from "./pages/ServiceFlags";
 import ServiceGifts from "./pages/ServiceGifts";
@@ -26,7 +27,7 @@ const pageVariants = {
 
 const PageLoader = ({ loading }) => {
   return loading ? (
-    <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-90">
+    <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-primary-300 bg-opacity-90">
       <span className="loader pointer-events-auto"></span>
     </div>
   ) : null;
@@ -44,6 +45,7 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         {[
           { path: "/", element: <Home /> },
+          { path: "/about-us", element: <AboutUs /> },
           { path: "/paper-bags-boxes", element: <ServiceBags /> },
           { path: "/flags-banners", element: <ServiceFlags /> },
           { path: "/gifts-promotions", element: <ServiceGifts /> },

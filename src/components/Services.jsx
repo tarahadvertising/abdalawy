@@ -10,7 +10,7 @@ const Services = () => {
   return (
     <section className="bg-white px-4 py-8 lg:py-28" id="ourExpertise">
       <h2 className="mb-4 text-center text-xl font-extrabold text-primary-500 lg:mb-6 lg:text-5xl">
-        Blueleaf Specialties
+        Blueleaf Specialities
       </h2>
       <p className="mx-auto mb-8 w-full text-center text-sm leading-relaxed text-black lg:mb-14 lg:w-2/4 lg:text-lg">
         Blueleaf offers innovative and high-quality solutions to elevate your
@@ -31,12 +31,12 @@ const Services = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/images/service-12.png"
-                className="h-40 w-full rounded-sm transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110 lg:h-72"
+                src="/images/specialities/indoor_outdoor_signs.webp"
+                className="h-40 w-full rounded-sm object-cover transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110 lg:h-72"
               />
             </motion.div>
             <p className="mt-3 text-center font-serif text-lg text-primary-500 group-hover:text-secondary-600 lg:text-2xl">
-              Indoor & Outdoor Signs
+              Indoor & Outdoor Branding
             </p>
           </Link>
           <Link
@@ -57,8 +57,8 @@ const Services = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/images/service-9.jpg"
-                className="h-40 w-full rounded-sm transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110 lg:h-72"
+                src="/images/specialities/paper_bags_boxes.webp"
+                className="h-40 w-full rounded-sm object-cover transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110 lg:h-72"
               />
             </motion.div>
             <p className="mt-3 text-center font-serif text-lg text-primary-500 group-hover:text-secondary-600 lg:text-2xl">
@@ -83,8 +83,8 @@ const Services = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/images/service-11.png"
-                className="h-40 w-full rounded-sm transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110 lg:h-72"
+                src="/images/specialities/flags_banners.webp"
+                className="h-40 w-full rounded-sm object-cover transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110 lg:h-72"
               />
             </motion.div>
             <p className="mt-3 text-center font-serif text-lg text-primary-500 group-hover:text-secondary-600 lg:text-2xl">
@@ -109,12 +109,12 @@ const Services = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/images/service-10.png"
-                className="h-40 w-full rounded-sm transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110 lg:h-72"
+                src="/images/specialities/corporate_gifts.webp"
+                className="h-40 w-full rounded-sm object-cover transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110 lg:h-72"
               />
             </motion.div>
             <p className="mt-3 text-center font-serif text-lg text-primary-500 group-hover:text-secondary-600 lg:text-2xl">
-              Corporate Gifts & Promotions
+              Corporate & Promotional Gifts
             </p>
           </Link>
           <Link
@@ -135,8 +135,8 @@ const Services = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/images/service-7.jpg"
-                className="h-40 w-full rounded-sm transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110 lg:h-72"
+                src="/images/specialities/office stationary.webp"
+                className="h-40 w-full rounded-sm object-cover transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110 lg:h-72"
               />
             </motion.div>
             <p className="mt-3 text-center font-serif text-lg text-primary-500 group-hover:text-secondary-600 lg:text-2xl">
@@ -161,8 +161,8 @@ const Services = () => {
               viewport={{ once: true }}
             >
               <img
-                src="/images/service-8.jpg"
-                className="h-40 w-full rounded-sm transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110 lg:h-72"
+                src="/images/specialities/restaurants_needs.webp"
+                className="h-40 w-full rounded-sm object-cover transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110 lg:h-72"
               />
             </motion.div>
             <p className="mt-3 text-center font-serif text-lg text-primary-500 group-hover:text-secondary-600 lg:text-2xl">
