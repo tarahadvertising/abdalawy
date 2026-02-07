@@ -1,5 +1,9 @@
-import Slider from "react-animated-slider";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "motion/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const flipVariants = {
   hidden: { opacity: 0, rotateY: -90 },
@@ -74,20 +78,29 @@ const slides = [
     service: "Document Clearing Services",
   },
 ];
-{
-  /* <Slider autoplay={2000} touchDisabled={true}></Slider> */
-}
+
 const Banner = () => {
   return (
-    <Slider touchDisabled={false} autoplay={6000}>
+    <Swiper
+      modules={[Autoplay, Navigation, Pagination]}
+      spaceBetween={0}
+      slidesPerView={1}
+      loop={true}
+      autoplay={{
+        delay: 6000,
+        disableOnInteraction: false,
+      }}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      className="h-full w-full"
+      style={{
+        background: "black",
+      }}
+    >
       {slides.map((item, index) => (
-        <div
-          key={index}
-          className="sliderContent"
-          style={{
-            background: `black`,
-          }}
-        >
+        <SwiperSlide key={index} className="sliderContent">
           {/* Video Background */}
           <video
             className="absolute inset-0 h-full w-full object-cover"
@@ -104,16 +117,34 @@ const Banner = () => {
           <div className="absolute inset-0 bg-black/40"></div>
 
           <div className="inner container relative z-10 mx-auto !p-4 sm:!p-6 md:!p-0">
-            <h1 className="ease max-w-full translate-y-[-20px] transform text-left text-2xl font-extrabold !leading-[1.3] text-white opacity-0 transition-all duration-300 sm:text-3xl md:max-w-[840px] md:text-4xl md:!leading-snug lg:text-7xl lg:!leading-[1.2]">
+            <motion.h1
+              className="ease max-w-full translate-y-[-20px] transform text-left text-2xl font-extrabold !leading-[1.3] text-white opacity-0 transition-all duration-300 sm:text-3xl md:max-w-[840px] md:text-4xl md:!leading-snug lg:text-7xl lg:!leading-[1.2]"
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               {item.title}
-            </h1>
-            <p className="ease my-[15px] mb-[25px] max-w-[760px] translate-y-[20px] transform text-left text-sm leading-[1.5] text-white opacity-0 transition-all duration-300 sm:text-base md:text-lg lg:text-xl">
+            </motion.h1>
+            <motion.p
+              className="ease my-[15px] mb-[25px] max-w-[760px] translate-y-[20px] transform text-left text-sm leading-[1.5] text-white opacity-0 transition-all duration-300 sm:text-base md:text-lg lg:text-xl"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
               {item.description}
-            </p>
+            </motion.p>
 
             {/* Features Display */}
             {item.features && (
-              <div className="ease my-4 translate-y-[20px] transform opacity-0 transition-all duration-300 sm:my-6 md:my-8">
+              <motion.div
+                className="ease my-4 translate-y-[20px] transform opacity-0 transition-all duration-300 sm:my-6 md:my-8"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+              >
                 <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-4 md:gap-4">
                   {item.features.map((feature, featureIndex) => (
                     <motion.div
@@ -121,7 +152,7 @@ const Banner = () => {
                       className="rounded-lg bg-white/10 px-2 py-1.5 text-center text-xs font-medium text-white backdrop-blur-sm sm:px-3 sm:py-2 sm:text-sm md:px-4 md:py-3 md:text-base"
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: featureIndex * 0.1 }}
+                      transition={{ delay: 0.8 + featureIndex * 0.1 }}
                       viewport={{ once: true }}
                       whileHover={{
                         scale: 1.05,
@@ -132,10 +163,10 @@ const Banner = () => {
                     </motion.div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             )}
 
-            <button
+            <motion.button
               onClick={() =>
                 window.open(
                   "//api.whatsapp.com/send?phone=971557167147&text=Hello, I'd like to learn more about your travel and tourism services.",
@@ -143,6 +174,12 @@ const Banner = () => {
                 )
               }
               className="ease flex translate-y-[20px] transform items-center space-x-2 rounded-full bg-secondary-500 px-4 py-2.5 text-sm font-medium text-white opacity-0 transition-all duration-300 hover:scale-105 hover:bg-secondary-600 hover:shadow-lg sm:px-5 sm:py-3 sm:text-base md:px-5 md:py-2 md:text-base lg:px-8 lg:py-4 lg:text-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <img
                 src="/images/icons/whatsapp-white.svg"
@@ -150,7 +187,7 @@ const Banner = () => {
                 className="mr-2 h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7"
               />
               {item.button}
-            </button>
+            </motion.button>
             <motion.span
               className="absolute -bottom-20 right-0 rounded-md bg-gradient-to-r from-white/80 to-white/60 px-3 py-2 text-xs font-semibold text-black shadow-lg backdrop-blur-sm sm:px-4 sm:py-2.5 sm:text-sm md:-bottom-28 md:px-6 md:py-3 md:text-sm lg:text-xl"
               variants={flipVariants}
@@ -163,9 +200,9 @@ const Banner = () => {
               {item.service}
             </motion.span>
           </div>
-        </div>
+        </SwiperSlide>
       ))}
-    </Slider>
+    </Swiper>
   );
 };
 
