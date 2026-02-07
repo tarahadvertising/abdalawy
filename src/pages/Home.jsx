@@ -1,6 +1,10 @@
 import Banner from "../components/Banner";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
 import { motion } from "motion/react";
 import { useEffect } from "react";
+import "swiper/css";
+import "swiper/css/effect-fade";
 
 const Home = () => {
   useEffect(() => {
@@ -8,6 +12,261 @@ const Home = () => {
   }, []);
   return (
     <main>
+      {/* Home Banner with Video Slider */}
+      <section className="relative h-screen w-full overflow-hidden">
+        <Swiper
+          modules={[Autoplay, EffectFade]}
+          effect="fade"
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          speed={1500}
+          allowTouchMove={true}
+          className="h-full w-full"
+        >
+          <SwiperSlide>
+            <div className="relative h-full w-full">
+              <video
+                className="absolute inset-0 h-full w-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source src="/images/videos/video1.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <motion.div
+                  className="mx-auto max-w-4xl px-4 text-center text-white"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                >
+                  <motion.h1
+                    className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl xl:text-6xl"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.8 }}
+                  >
+                    Discover Your
+                    <br />
+                    <span className="text-secondary-400">Next Adventure</span>
+                  </motion.h1>
+                  <motion.p
+                    className="mb-6 text-lg text-white/90 md:text-xl lg:text-2xl"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 1.1 }}
+                  >
+                    Embark on extraordinary journeys with our premium travel
+                    services
+                  </motion.p>
+                  <motion.button
+                    className="rounded-full bg-secondary-500 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-secondary-600 hover:shadow-xl"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1, delay: 1.4 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() =>
+                      window.open(
+                        "//api.whatsapp.com/send?phone=971557167147&text=Hello, I'd like to know more about your travel services.",
+                        "_blank",
+                      )
+                    }
+                  >
+                    Explore Services
+                  </motion.button>
+                </motion.div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="relative h-full w-full">
+              <video
+                className="absolute inset-0 h-full w-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source src="/images/videos/video2.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <motion.div
+                  className="mx-auto max-w-4xl px-4 text-center text-white"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                >
+                  <motion.h1
+                    className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl xl:text-6xl"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.8 }}
+                  >
+                    Build Your Future
+                    <br />
+                    <span className="text-secondary-400">Beyond Borders</span>
+                  </motion.h1>
+                  <motion.p
+                    className="mb-6 text-lg text-white/90 md:text-xl lg:text-2xl"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 1.1 }}
+                  >
+                    Elevate your global journey with trusted immigration
+                    solutions
+                  </motion.p>
+                  <motion.button
+                    className="rounded-full bg-secondary-500 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-secondary-600 hover:shadow-xl"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1, delay: 1.4 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() =>
+                      window.open(
+                        "//api.whatsapp.com/send?phone=971557167147&text=Hello, I'd like to know more about your immigration services.",
+                        "_blank",
+                      )
+                    }
+                  >
+                    Start Journey
+                  </motion.button>
+                </motion.div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="relative h-full w-full">
+              <video
+                className="absolute inset-0 h-full w-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source src="/images/videos/video3.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <motion.div
+                  className="mx-auto max-w-4xl px-4 text-center text-white"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                >
+                  <motion.h1
+                    className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl xl:text-6xl"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.8 }}
+                  >
+                    Enjoy Every
+                    <br />
+                    <span className="text-secondary-400">
+                      Escape to Paradise
+                    </span>
+                  </motion.h1>
+                  <motion.p
+                    className="mb-6 text-lg text-white/90 md:text-xl lg:text-2xl"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 1.1 }}
+                  >
+                    Indulge in curated holiday experiences tailored to your
+                    dreams
+                  </motion.p>
+                  <motion.button
+                    className="rounded-full bg-secondary-500 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-secondary-600 hover:shadow-xl"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1, delay: 1.4 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() =>
+                      window.open(
+                        "//api.whatsapp.com/send?phone=971557167147&text=Hello, I'd like to know more about your holiday packages.",
+                        "_blank",
+                      )
+                    }
+                  >
+                    Book Now
+                  </motion.button>
+                </motion.div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="relative h-full w-full">
+              <video
+                className="absolute inset-0 h-full w-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source src="/images/videos/video4.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <motion.div
+                  className="mx-auto max-w-4xl px-4 text-center text-white"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.5 }}
+                >
+                  <motion.h1
+                    className="mb-4 text-3xl font-bold md:text-4xl lg:text-5xl xl:text-6xl"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.8 }}
+                  >
+                    Streamline Your
+                    <br />
+                    <span className="text-secondary-400">
+                      Documentation Process
+                    </span>
+                  </motion.h1>
+                  <motion.p
+                    className="mb-6 text-lg text-white/90 md:text-xl lg:text-2xl"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 1.1 }}
+                  >
+                    Navigate complex paperwork with our expert clearing services
+                  </motion.p>
+                  <motion.button
+                    className="rounded-full bg-secondary-500 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-secondary-600 hover:shadow-xl"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1, delay: 1.4 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() =>
+                      window.open(
+                        "//api.whatsapp.com/send?phone=971557167147&text=Hello, I'd like to know more about your document clearing services.",
+                        "_blank",
+                      )
+                    }
+                  >
+                    Get Started
+                  </motion.button>
+                </motion.div>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </section>
+
       <Banner />
       {/* About Section */}
       <section
