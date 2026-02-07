@@ -324,6 +324,126 @@
   background-size: cover;
 }
 .icon {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
+}
+
+@media (min-width: 640px) {
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .icon {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+/* Mobile-specific touch improvements */
+@media (max-width: 768px) {
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  .hover\:scale-105:hover {
+    transform: scale(1.02);
+  }
+
+  .hover\:scale-110:hover {
+    transform: scale(1.05);
+  }
+
+  /* Prevent double-tap zoom on interactive elements */
+  button,
+  a {
+    touch-action: manipulation;
+  }
+
+  /* Improve tap targets */
+  .sliderContent button {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}
+
+/* Mobile-specific animations and transitions */
+@media (max-width: 768px) {
+  /* Reduce animation intensity for mobile performance */
+  .motion-reduce * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* Optimize hover effects for touch */
+  @media (hover: none) {
+    .hover\:scale-105:hover {
+      transform: none;
+    }
+
+    .hover\:scale-110:hover {
+      transform: none;
+    }
+
+    /* Add active states for touch */
+    button:active,
+    a:active {
+      transform: scale(0.95);
+      transition: transform 0.1s ease;
+    }
+  }
+
+  /* Smooth slide-in animations for mobile */
+  .slide-in-left {
+    animation: slideInLeft 0.3s ease-out;
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.3s ease-out;
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 0.4s ease-out;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

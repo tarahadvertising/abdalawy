@@ -111,7 +111,7 @@ const Home = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group inline-flex items-center space-x-3 rounded-full border-2 border-secondary-400 bg-transparent px-8 py-4 font-semibold text-secondary-400 transition-all duration-300 hover:bg-secondary-400 hover:text-primary-600 hover:shadow-xl"
+                  className="group inline-flex items-center space-x-2 rounded-full border-2 border-secondary-400 bg-transparent px-4 py-2 text-sm font-semibold text-secondary-400 transition-all duration-300 hover:bg-secondary-400 hover:text-primary-600 hover:shadow-xl sm:space-x-3 sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4"
                   onClick={() => window.open("#", "_blank")}
                 >
                   <svg
@@ -122,13 +122,15 @@ const Home = () => {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="h-6 w-6 transition-transform duration-300 group-hover:translate-y-1"
+                    className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-1 sm:h-5 sm:w-5 md:h-6 md:w-6"
                   >
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                     <polyline points="7 10 12 15 17 10"></polyline>
                     <line x1="12" y1="15" x2="12" y2="3"></line>
                   </svg>
-                  <span>Download Brochure</span>
+                  <span className="text-xs sm:text-sm md:text-base">
+                    Download Brochure
+                  </span>
                 </motion.button>
               </motion.div>
             </motion.div>
@@ -143,11 +145,11 @@ const Home = () => {
             >
               <div className="relative">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-secondary-400/20 to-primary-400/20 blur-xl"></div>
-                <div className="relative rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-sm">
+                <div className="relative rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-sm sm:p-6 md:p-8">
                   <img
                     src="/images/icons/title_logo.svg"
                     alt="Abdalawy Services Logo"
-                    className="mx-auto w-full max-w-xs transform transition-transform duration-300 hover:scale-105 lg:mx-0"
+                    className="mx-auto w-full max-w-[200px] transform transition-transform duration-300 hover:scale-105 sm:max-w-xs md:max-w-sm lg:mx-0"
                   />
                 </div>
               </div>
@@ -172,11 +174,16 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="mb-4 flex items-center justify-center gap-4 text-3xl font-bold text-primary-600 md:text-4xl lg:text-5xl">
-              <img src="/images/icons/travels.svg" alt="" className="icon" />
-              Travel and Tourism Services
+            <h2 className="mb-4 flex flex-col items-center justify-center gap-2 text-center text-2xl font-bold text-primary-600 sm:flex-row sm:gap-4 sm:text-3xl md:text-4xl lg:text-5xl">
+              <img
+                src="/images/icons/travels.svg"
+                alt=""
+                className="h-8 w-8 object-contain sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16"
+              />
+              <span className="leading-tight">Travel and Tourism Services</span>
             </h2>
-            <p className="mx-auto max-w-3xl text-lg text-gray-600">
+
+            <p className="mx-auto max-w-3xl text-base text-gray-600 sm:text-lg">
               Discover the world with our comprehensive travel solutions. From
               visa assistance to luxury accommodations, we make every journey
               unforgettable.
@@ -185,7 +192,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <motion.div
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -225,12 +232,13 @@ const Home = () => {
                   <img
                     src={service.img}
                     alt={service.title}
-                    className="h-52 w-full rounded-xl object-cover shadow-lg"
+                    className="h-40 w-full rounded-xl object-cover shadow-lg sm:h-48 md:h-52"
                   />
-                  <div className="absolute inset-0 flex items-end rounded-xl bg-gradient-to-t from-primary-900/80 to-transparent p-4">
+                  <div className="absolute inset-0 flex items-end rounded-xl bg-gradient-to-t from-primary-900/80 to-transparent p-3 sm:p-4">
                     <div className="text-white">
-                      <div className="mb-1 text-2xl">{service.icon}</div>
-                      <p className="font-semibold">{service.title}</p>
+                      <p className="text-sm font-semibold sm:text-base">
+                        {service.title}
+                      </p>
                     </div>
                   </div>
                 </motion.div>
@@ -244,11 +252,11 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <div className="rounded-2xl bg-white p-8 shadow-xl">
-                <h3 className="mb-4 text-2xl font-bold text-primary-600">
+              <div className="rounded-2xl bg-white p-4 shadow-xl sm:p-6 md:p-8">
+                <h3 className="mb-3 text-xl font-bold text-primary-600 sm:mb-4 sm:text-2xl">
                   Your Journey, Our Expertise
                 </h3>
-                <p className="mb-6 leading-relaxed text-gray-600">
+                <p className="mb-4 text-sm leading-relaxed text-gray-600 sm:mb-6 sm:text-base">
                   We offer seamless travel solutions tailored to your needs.
                   Whether it&apos;s business travel, family vacations, or solo
                   adventures, our experienced team ensures every detail is
@@ -261,16 +269,21 @@ const Home = () => {
                     " Best price guarantee",
                     " 24/7 travel support",
                   ].map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <div className="h-2 w-2 rounded-full bg-secondary-500"></div>
-                      <span className="text-gray-700">{feature}</span>
+                    <div
+                      key={index}
+                      className="flex items-center space-x-2 sm:space-x-3"
+                    >
+                      <div className="h-1.5 w-1.5 rounded-full bg-secondary-500 sm:h-2 sm:w-2"></div>
+                      <span className="text-xs text-gray-700 sm:text-sm">
+                        {feature}
+                      </span>
                     </div>
                   ))}
                 </div>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-6 py-3 font-semibold text-white transition-all duration-300 hover:shadow-lg"
+                  className="w-full rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-4 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:shadow-lg sm:px-6 sm:py-3 sm:text-base"
                   onClick={() =>
                     window.open(
                       "//api.whatsapp.com/send?phone=971557167147&text=Hello, I'd like to know more about your travel services.",
@@ -302,15 +315,15 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="mb-4 flex items-center justify-center gap-4 text-3xl font-bold text-primary-600 md:text-4xl lg:text-5xl">
+            <h2 className="mb-4 flex items-center justify-center gap-2 text-2xl font-bold text-primary-600 sm:gap-4 sm:text-3xl md:text-4xl lg:text-5xl">
               <img
                 src="/images/icons/immigration.svg"
                 alt=""
-                className="icon"
+                className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16"
               />
-              Immigration Solutions
+              <span className="text-center">Immigration Solutions</span>
             </h2>
-            <p className="mx-auto max-w-3xl text-lg text-gray-600">
+            <p className="mx-auto max-w-3xl text-base text-gray-600 sm:text-lg">
               Navigate global opportunities with our expert immigration
               services. From work visas to residency, we make your international
               dreams a reality.
@@ -325,32 +338,37 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="rounded-2xl bg-white p-8 shadow-xl">
-                <h3 className="mb-4 text-2xl font-bold text-emerald-700">
+              <div className="rounded-2xl bg-white p-4 shadow-xl sm:p-6 md:p-8">
+                <h3 className="mb-3 text-xl font-bold text-emerald-700 sm:mb-4 sm:text-2xl">
                   Your Global Journey Starts Here
                 </h3>
-                <p className="mb-6 leading-relaxed text-gray-600">
+                <p className="mb-4 text-sm leading-relaxed text-gray-600 sm:mb-6 sm:text-base">
                   Our immigration experts provide comprehensive support for your
                   international relocation needs. We handle the complexities so
                   you can focus on your new beginning.
                 </p>
-                <div className="mb-6 space-y-3">
+                <div className="mb-4 space-y-2 sm:mb-6 sm:space-y-3">
                   {[
                     " Complete documentation support",
                     " Work & business visas",
                     " Student visa assistance",
                     " Residency & settlement",
                   ].map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
-                      <span className="text-gray-700">{feature}</span>
+                    <div
+                      key={index}
+                      className="flex items-center space-x-2 sm:space-x-3"
+                    >
+                      <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 sm:h-2 sm:w-2"></div>
+                      <span className="text-xs text-gray-700 sm:text-sm">
+                        {feature}
+                      </span>
                     </div>
                   ))}
                 </div>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 font-semibold text-white transition-all duration-300 hover:shadow-lg"
+                  className="w-full rounded-full bg-gradient-to-r from-emerald-600 to-teal-600 px-4 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:shadow-lg sm:px-6 sm:py-3 sm:text-base"
                   onClick={() =>
                     window.open(
                       "//api.whatsapp.com/send?phone=971557167147&text=Hello, I'd like to know more about your immigration services.",
@@ -364,7 +382,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -404,12 +422,13 @@ const Home = () => {
                   <img
                     src={service.img}
                     alt={service.title}
-                    className="h-52 w-full rounded-xl object-cover shadow-lg"
+                    className="h-40 w-full rounded-xl object-cover shadow-lg sm:h-48 md:h-52"
                   />
-                  <div className="absolute inset-0 flex items-end rounded-xl bg-gradient-to-t from-emerald-900/80 to-transparent p-4">
+                  <div className="absolute inset-0 flex items-end rounded-xl bg-gradient-to-t from-emerald-900/80 to-transparent p-3 sm:p-4">
                     <div className="text-white">
-                      <div className="mb-1 text-2xl">{service.icon}</div>
-                      <p className="font-semibold">{service.title}</p>
+                      <p className="text-sm font-semibold sm:text-base">
+                        {service.title}
+                      </p>
                     </div>
                   </div>
                 </motion.div>
@@ -435,11 +454,15 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="mb-4 flex items-center justify-center gap-4 text-3xl font-bold text-primary-600 md:text-4xl lg:text-5xl">
-              <img src="/images/icons/holiday.svg" alt="" className="icon" />
-              Holiday Packages
+            <h2 className="mb-4 flex items-center justify-center gap-2 text-2xl font-bold text-primary-600 sm:gap-4 sm:text-3xl md:text-4xl lg:text-5xl">
+              <img
+                src="/images/icons/holiday.svg"
+                alt=""
+                className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16"
+              />
+              <span className="text-center">Holiday Packages</span>
             </h2>
-            <p className="mx-auto max-w-3xl text-lg text-gray-600">
+            <p className="mx-auto max-w-3xl text-base text-gray-600 sm:text-lg">
               Escape to paradise with our curated holiday packages. From
               romantic getaways to family adventures, we create memories that
               last forever.
@@ -448,7 +471,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <motion.div
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -488,12 +511,13 @@ const Home = () => {
                   <img
                     src={service.img}
                     alt={service.title}
-                    className="h-52 w-full rounded-xl object-cover shadow-lg"
+                    className="h-40 w-full rounded-xl object-cover shadow-lg sm:h-48 md:h-52"
                   />
-                  <div className="absolute inset-0 flex items-end rounded-xl bg-gradient-to-t from-orange-900/80 to-transparent p-4">
+                  <div className="absolute inset-0 flex items-end rounded-xl bg-gradient-to-t from-orange-900/80 to-transparent p-3 sm:p-4">
                     <div className="text-white">
-                      <div className="mb-1 text-2xl">{service.icon}</div>
-                      <p className="font-semibold">{service.title}</p>
+                      <p className="text-sm font-semibold sm:text-base">
+                        {service.title}
+                      </p>
                     </div>
                   </div>
                 </motion.div>
@@ -507,32 +531,37 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <div className="rounded-2xl bg-white p-8 shadow-xl">
-                <h3 className="mb-4 text-2xl font-bold text-orange-700">
+              <div className="rounded-2xl bg-white p-4 shadow-xl sm:p-6 md:p-8">
+                <h3 className="mb-3 text-xl font-bold text-orange-700 sm:mb-4 sm:text-2xl">
                   Your Perfect Getaway Awaits
                 </h3>
-                <p className="mb-6 leading-relaxed text-gray-600">
+                <p className="mb-4 text-sm leading-relaxed text-gray-600 sm:mb-6 sm:text-base">
                   Indulge in carefully crafted holiday experiences designed for
                   every traveler. From beach resorts to mountain retreats, we
                   handle all the details while you enjoy the journey.
                 </p>
-                <div className="mb-6 space-y-3">
+                <div className="mb-4 space-y-2 sm:mb-6 sm:space-y-3">
                   {[
                     " Premium accommodations",
                     " All-inclusive options",
                     " Transportation included",
                     " Customized itineraries",
                   ].map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <div className="h-2 w-2 rounded-full bg-orange-500"></div>
-                      <span className="text-gray-700">{feature}</span>
+                    <div
+                      key={index}
+                      className="flex items-center space-x-2 sm:space-x-3"
+                    >
+                      <div className="h-1.5 w-1.5 rounded-full bg-orange-500 sm:h-2 sm:w-2"></div>
+                      <span className="text-xs text-gray-700 sm:text-sm">
+                        {feature}
+                      </span>
                     </div>
                   ))}
                 </div>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full rounded-full bg-gradient-to-r from-orange-500 to-amber-600 px-6 py-3 font-semibold text-white transition-all duration-300 hover:shadow-lg"
+                  className="w-full rounded-full bg-gradient-to-r from-orange-500 to-amber-600 px-4 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:shadow-lg sm:px-6 sm:py-3 sm:text-base"
                   onClick={() =>
                     window.open(
                       "//api.whatsapp.com/send?phone=971557167147&text=Hello, I'd like to know more about your holiday packages.",
@@ -564,15 +593,16 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="mb-4 flex items-center justify-center gap-4 text-3xl font-bold text-primary-600 md:text-4xl lg:text-5xl">
+            <h2 className="mb-4 flex items-center justify-center gap-2 text-center text-2xl font-bold text-primary-600 sm:gap-4 sm:text-3xl md:text-4xl lg:text-5xl">
               <img
                 src="/images/icons/documentation.svg"
                 alt=""
-                className="icon"
+                className="h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10 md:h-12 md:w-12 lg:h-16 lg:w-16"
               />
-              Document Clearing Services
+              <span className="leading-tight">Documentation Services</span>
             </h2>
-            <p className="mx-auto max-w-3xl text-lg text-gray-600">
+
+            <p className="mx-auto max-w-3xl text-base text-gray-600 sm:text-lg">
               Streamline your paperwork with our professional document clearing
               services. From visas to business licenses, we handle bureaucracy
               efficiently.
@@ -587,32 +617,37 @@ const Home = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="rounded-2xl bg-white p-8 shadow-xl">
-                <h3 className="mb-4 text-2xl font-bold text-purple-700">
+              <div className="rounded-2xl bg-white p-4 shadow-xl sm:p-6 md:p-8">
+                <h3 className="mb-3 text-xl font-bold text-purple-700 sm:mb-4 sm:text-2xl">
                   Efficient Document Processing
                 </h3>
-                <p className="mb-6 leading-relaxed text-gray-600">
+                <p className="mb-4 text-sm leading-relaxed text-gray-600 sm:mb-6 sm:text-base">
                   Navigate complex documentation requirements with our expert
                   clearing services. We ensure accuracy, compliance, and timely
                   processing for all your official paperwork needs.
                 </p>
-                <div className="mb-6 space-y-3">
+                <div className="mb-4 space-y-2 sm:mb-6 sm:space-y-3">
                   {[
                     " Complete document management",
                     " Business license processing",
                     " Government liaison services",
                     " Fast-track processing",
                   ].map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <div className="h-2 w-2 rounded-full bg-purple-500"></div>
-                      <span className="text-gray-700">{feature}</span>
+                    <div
+                      key={index}
+                      className="flex items-center space-x-2 sm:space-x-3"
+                    >
+                      <div className="h-1.5 w-1.5 rounded-full bg-purple-500 sm:h-2 sm:w-2"></div>
+                      <span className="text-xs text-gray-700 sm:text-sm">
+                        {feature}
+                      </span>
                     </div>
                   ))}
                 </div>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 px-6 py-3 font-semibold text-white transition-all duration-300 hover:shadow-lg"
+                  className="w-full rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:shadow-lg sm:px-6 sm:py-3 sm:text-base"
                   onClick={() =>
                     window.open(
                       "//api.whatsapp.com/send?phone=971557167147&text=Hello, I'd like to know more about your document clearing services.",
@@ -626,7 +661,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -666,12 +701,13 @@ const Home = () => {
                   <img
                     src={service.img}
                     alt={service.title}
-                    className="h-52 w-full rounded-xl object-cover shadow-lg"
+                    className="h-40 w-full rounded-xl object-cover shadow-lg sm:h-48 md:h-52"
                   />
-                  <div className="absolute inset-0 flex items-end rounded-xl bg-gradient-to-t from-purple-900/80 to-transparent p-4">
+                  <div className="absolute inset-0 flex items-end rounded-xl bg-gradient-to-t from-purple-900/80 to-transparent p-3 sm:p-4">
                     <div className="text-white">
-                      <div className="mb-1 text-2xl">{service.icon}</div>
-                      <p className="font-semibold">{service.title}</p>
+                      <p className="text-sm font-semibold sm:text-base">
+                        {service.title}
+                      </p>
                     </div>
                   </div>
                 </motion.div>

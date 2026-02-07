@@ -258,12 +258,12 @@ const Contact = () => {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          className="w-full rounded-xl border-2 border-gray-200 bg-white/80 px-4 py-4 pl-12 backdrop-blur-sm transition-all duration-300 focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-500/20"
+                          className="w-full rounded-xl border-2 border-gray-200 bg-white/80 px-3 py-3 pl-10 text-sm backdrop-blur-sm transition-all duration-300 focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-500/20 sm:px-4 sm:py-4 sm:pl-12"
                           placeholder="Your full name"
                         />
-                        <div className="absolute inset-y-0 left-0 flex items-center pl-4">
+                        <div className="absolute inset-y-0 left-0 flex items-center pl-3 sm:pl-4">
                           <svg
-                            className="h-5 w-5 text-gray-400"
+                            className="h-4 w-4 text-gray-400 sm:h-5 sm:w-5"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -304,12 +304,12 @@ const Contact = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="w-full rounded-xl border-2 border-gray-200 bg-white/80 px-4 py-4 pl-12 backdrop-blur-sm transition-all duration-300 focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-500/20"
+                          className="w-full rounded-xl border-2 border-gray-200 bg-white/80 px-3 py-3 pl-10 text-sm backdrop-blur-sm transition-all duration-300 focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-500/20 sm:px-4 sm:py-4 sm:pl-12"
                           placeholder="your@email.com"
                         />
-                        <div className="absolute inset-y-0 left-0 flex items-center pl-4">
+                        <div className="absolute inset-y-0 left-0 flex items-center pl-3 sm:pl-4">
                           <svg
-                            className="h-5 w-5 text-gray-400"
+                            className="h-4 w-4 text-gray-400 sm:h-5 sm:w-5"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -351,12 +351,12 @@ const Contact = () => {
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full rounded-xl border-2 border-gray-200 bg-white/80 px-4 py-4 pl-12 backdrop-blur-sm transition-all duration-300 focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-500/20"
+                          className="w-full rounded-xl border-2 border-gray-200 bg-white/80 px-3 py-3 pl-10 text-sm backdrop-blur-sm transition-all duration-300 focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-500/20 sm:px-4 sm:py-4 sm:pl-12"
                           placeholder="+971 XX XXX XXXX"
                         />
-                        <div className="absolute inset-y-0 left-0 flex items-center pl-4">
+                        <div className="absolute inset-y-0 left-0 flex items-center pl-3 sm:pl-4">
                           <svg
-                            className="h-5 w-5 text-gray-400"
+                            className="h-4 w-4 text-gray-400 sm:h-5 sm:w-5"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -406,9 +406,9 @@ const Contact = () => {
                           <option value="document">Document Clearing</option>
                           <option value="other">Other</option>
                         </select>
-                        <div className="absolute inset-y-0 left-0 flex items-center pl-4">
+                        <div className="absolute inset-y-0 left-0 flex items-center pl-3 sm:pl-4">
                           <svg
-                            className="h-5 w-5 text-gray-400"
+                            className="h-4 w-4 text-gray-400 sm:h-5 sm:w-5"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -421,9 +421,9 @@ const Contact = () => {
                             ></path>
                           </svg>
                         </div>
-                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4">
+                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 sm:pr-4">
                           <svg
-                            className="h-5 w-5 text-gray-400"
+                            className="h-4 w-4 text-gray-400 sm:h-5 sm:w-5"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -465,12 +465,12 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         rows={5}
-                        className="w-full resize-none rounded-xl border-2 border-gray-200 bg-white/80 px-4 py-4 pl-12 backdrop-blur-sm transition-all duration-300 focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-500/20"
+                        className="w-full resize-none rounded-xl border-2 border-gray-200 bg-white/80 px-3 py-3 pl-10 text-sm backdrop-blur-sm transition-all duration-300 focus:border-primary-500 focus:outline-none focus:ring-4 focus:ring-primary-500/20 sm:px-4 sm:py-4 sm:pl-12"
                         placeholder="Tell us about your requirements..."
                       ></textarea>
-                      <div className="absolute left-4 top-4">
+                      <div className="absolute left-3 top-3 sm:left-4 sm:top-4">
                         <svg
-                          className="h-5 w-5 text-gray-400"
+                          className="h-4 w-4 text-gray-400 sm:h-5 sm:w-5"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"

@@ -79,7 +79,7 @@ const slides = [
 }
 const Banner = () => {
   return (
-    <Slider touchDisabled={true} autoplay={1000}>
+    <Slider touchDisabled={false} autoplay={6000}>
       {slides.map((item, index) => (
         <div
           key={index}
@@ -103,22 +103,22 @@ const Banner = () => {
           {/* Overlay for text readability */}
           <div className="absolute inset-0 bg-black/40"></div>
 
-          <div className="inner container relative z-10 mx-auto !p-0">
-            <h1 className="ease max-w-full translate-y-[-20px] transform text-left text-3xl font-extrabold !leading-[1.5] text-white opacity-0 transition-all duration-300 md:max-w-[840px] md:text-4xl md:!leading-snug lg:text-7xl lg:!leading-[1.2]">
+          <div className="inner container relative z-10 mx-auto !p-4 sm:!p-6 md:!p-0">
+            <h1 className="ease max-w-full translate-y-[-20px] transform text-left text-2xl font-extrabold !leading-[1.3] text-white opacity-0 transition-all duration-300 sm:text-3xl md:max-w-[840px] md:text-4xl md:!leading-snug lg:text-7xl lg:!leading-[1.2]">
               {item.title}
             </h1>
-            <p className="ease my-[20px] mb-[30px] max-w-[760px] translate-y-[20px] transform text-left text-base leading-[1.5] text-white opacity-0 transition-all duration-300 md:text-lg lg:text-xl">
+            <p className="ease my-[15px] mb-[25px] max-w-[760px] translate-y-[20px] transform text-left text-sm leading-[1.5] text-white opacity-0 transition-all duration-300 sm:text-base md:text-lg lg:text-xl">
               {item.description}
             </p>
 
             {/* Features Display */}
             {item.features && (
-              <div className="ease my-6 translate-y-[20px] transform opacity-0 transition-all duration-300 md:my-8">
-                <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+              <div className="ease my-4 translate-y-[20px] transform opacity-0 transition-all duration-300 sm:my-6 md:my-8">
+                <div className="grid grid-cols-2 gap-2 sm:gap-3 md:grid-cols-4 md:gap-4">
                   {item.features.map((feature, featureIndex) => (
                     <motion.div
                       key={featureIndex}
-                      className="rounded-lg bg-white/10 px-3 py-2 text-center text-sm font-medium text-white backdrop-blur-sm md:px-4 md:py-3 md:text-base"
+                      className="rounded-lg bg-white/10 px-2 py-1.5 text-center text-xs font-medium text-white backdrop-blur-sm sm:px-3 sm:py-2 sm:text-sm md:px-4 md:py-3 md:text-base"
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ delay: featureIndex * 0.1 }}
@@ -142,17 +142,17 @@ const Banner = () => {
                   "_blank",
                 )
               }
-              className="ease flex translate-y-[20px] transform items-center space-x-2 rounded-full bg-secondary-500 px-5 py-3 text-base font-medium text-white opacity-0 transition-all duration-300 hover:scale-105 hover:bg-secondary-600 hover:shadow-lg md:px-5 md:py-2 md:text-base lg:px-8 lg:py-4 lg:text-lg"
+              className="ease flex translate-y-[20px] transform items-center space-x-2 rounded-full bg-secondary-500 px-4 py-2.5 text-sm font-medium text-white opacity-0 transition-all duration-300 hover:scale-105 hover:bg-secondary-600 hover:shadow-lg sm:px-5 sm:py-3 sm:text-base md:px-5 md:py-2 md:text-base lg:px-8 lg:py-4 lg:text-lg"
             >
               <img
                 src="/images/icons/whatsapp-white.svg"
                 alt="WhatsApp Icon"
-                className="mr-2 h-7 w-7"
+                className="mr-2 h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7"
               />
               {item.button}
             </button>
             <motion.span
-              className="absolute -bottom-28 right-0 rounded-md bg-gradient-to-r from-white/80 to-white/60 px-6 py-3 text-sm font-semibold text-black shadow-lg backdrop-blur-sm lg:text-xl"
+              className="absolute -bottom-20 right-0 rounded-md bg-gradient-to-r from-white/80 to-white/60 px-3 py-2 text-xs font-semibold text-black shadow-lg backdrop-blur-sm sm:px-4 sm:py-2.5 sm:text-sm md:-bottom-28 md:px-6 md:py-3 md:text-sm lg:text-xl"
               variants={flipVariants}
               initial="hidden"
               whileInView="visible"

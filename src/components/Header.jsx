@@ -138,38 +138,43 @@ const Header = () => {
         </div>
       </div>
       {isMobileMenuOpen && (
-        <div id="mobile-menu" className="mt-5 md:hidden">
-          <nav className="flex flex-col space-y-2">
-            <Link
-              className="border-b border-primary-600 pb-4 pt-2 text-sm font-medium leading-relaxed text-secondary-500"
-              to="/"
-              onClick={closeMobileMenu}
-            >
-              Home
-            </Link>
-            <Link
-              className="border-b border-primary-600 pb-4 pt-2 text-sm font-medium leading-relaxed text-secondary-500"
-              to="/about-us"
-              onClick={closeMobileMenu}
-            >
-              About Us
-            </Link>
-            <Link
-              className="border-b border-primary-600 pb-4 pt-2 text-sm font-medium leading-relaxed text-secondary-500"
-              to="contact"
-              onClick={closeMobileMenu}
-            >
-              Contact Us
-            </Link>
-            <Link
-              className="pt-2 text-sm font-medium leading-relaxed text-secondary-500"
-              to="#"
-              target="_blank"
-              onClick={closeMobileMenu}
-            >
-              Company Brochure
-            </Link>
-          </nav>
+        <div
+          id="mobile-menu"
+          className="fixed inset-0 top-16 z-50 bg-white shadow-lg md:hidden"
+        >
+          <div className="container mx-auto px-4 py-6">
+            <nav className="flex flex-col space-y-4">
+              <Link
+                className="block border-b border-gray-200 py-3 text-base font-medium text-primary-500 transition-colors hover:text-secondary-500"
+                to="/"
+                onClick={closeMobileMenu}
+              >
+                Home
+              </Link>
+              <Link
+                className="block border-b border-gray-200 py-3 text-base font-medium text-primary-500 transition-colors hover:text-secondary-500"
+                to="/about-us"
+                onClick={closeMobileMenu}
+              >
+                About Us
+              </Link>
+              <Link
+                className="block border-b border-gray-200 py-3 text-base font-medium text-primary-500 transition-colors hover:text-secondary-500"
+                to="contact"
+                onClick={closeMobileMenu}
+              >
+                Contact Us
+              </Link>
+              <Link
+                className="block py-3 text-base font-medium text-primary-500 transition-colors hover:text-secondary-500"
+                to="#"
+                target="_blank"
+                onClick={closeMobileMenu}
+              >
+                Company Brochure
+              </Link>
+            </nav>
+          </div>
         </div>
       )}
     </header>
