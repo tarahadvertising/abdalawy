@@ -406,7 +406,7 @@ const Home = () => {
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-secondary-400/20 to-primary-400/20 blur-xl"></div>
                 <div className="relative rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-sm sm:p-6 md:p-8">
                   <img
-                    src="/images/icons/title_logo.svg"
+                    src="/images/aboutus/aboutus.webp"
                     alt="Abdalawy Services Logo"
                     className="mx-auto w-full max-w-[200px] transform transition-transform duration-300 hover:scale-105 sm:max-w-xs md:max-w-sm lg:mx-0"
                   />

@@ -567,9 +567,9 @@ const Contact = () => {
                         <p className="font-medium text-gray-600">
                           +971 55 716 7147
                         </p>
-                        <p className="font-medium text-gray-600">
+                        {/* <p className="font-medium text-gray-600">
                           +971 4 234 5678
-                        </p>
+                        </p> */}
                         <p className="mt-1 text-sm text-gray-500">
                           Mon-Fri: 9:00 AM - 6:00 PM (GST)
                         </p>
@@ -597,11 +597,11 @@ const Contact = () => {
                       <div className="flex-1">
                         <p className="text-lg font-bold text-gray-900">Email</p>
                         <p className="font-medium text-gray-600">
-                          info@abdalawygroup.com
+                          info@abdalawyservices.com
                         </p>
-                        <p className="font-medium text-gray-600">
-                          support@abdalawygroup.com
-                        </p>
+                        {/* <p className="font-medium text-gray-600">
+                          support@abdalawyservices.com
+                        </p> */}
                         <p className="mt-1 text-sm text-gray-500">
                           24/7 Email Support Available
                         </p>

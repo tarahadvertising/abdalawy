@@ -219,7 +219,7 @@ const Footer = () => {
                 </motion.a>
 
                 <motion.a
-                  href="mailto:info@abdalawygroup.com"
+                  href="mailto:info@abdalawyservices.com"
                   className="flex items-center space-x-3 text-primary-200 transition-all duration-300 hover:text-white"
                   whileHover={{ x: 5 }}
                 >
@@ -232,7 +232,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <p className="text-sm text-primary-300">Email</p>
-                    <p className="font-medium">info@abdalawygroup.com</p>
+                    <p className="font-medium">info@abdalawyservices.com</p>
                   </div>
                 </motion.a>
 

@@ -195,7 +195,7 @@ const AboutUs = () => {
                 {/* Main image container */}
                 <div className="relative rounded-3xl border border-white/20 bg-white/10 p-8 shadow-2xl backdrop-blur-sm">
                   <motion.img
-                    src="/images/icons/title_logo.svg"
+                    src="/images/aboutus/aboutus.webp"
                     alt="Abdalawy Services Logo"
                     className="mx-auto w-full max-w-xs transform transition-transform duration-500 hover:scale-110"
                     whileHover={{ rotate: [0, -5, 5, 0] }}
