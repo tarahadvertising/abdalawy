@@ -380,26 +380,25 @@ const AboutUs = () => {
               and building lasting relationships with our clients.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {[
               {
                 name: "Eman Elbaz Abdelrahman Azzam",
-                role: "Sales",
-                bio: "Dedicated sales professional focused on client satisfaction and building lasting relationships.",
-                image: "/images/aboutus/profile1.webp",
+                role: "Consulting Agent",
+                bio: "Dedicated consulting agent focused on client satisfaction and building lasting relationships.",
+                image: "/images/aboutus/female1.jpg",
               },
               {
                 name: "Sameh Ilahi",
-                role: "Sales",
-                bio: "Expert sales consultant with a passion for delivering exceptional service and solutions.",
-                image: "/images/aboutus/profile2.webp",
+                role: "Consulting Agent",
+                bio: "Expert consulting agent with a passion for delivering exceptional service and solutions.",
+                image: "/images/aboutus/female2.jpg",
               },
               {
                 name: "Sheik Imam Bundu",
-                role: "Sales",
-                bio: "Results-driven sales specialist committed to exceeding client expectations.",
-                image: "/images/aboutus/profile3.webp",
+                role: "Consulting Agent",
+                bio: "Results-driven consulting agent committed to exceeding client expectations.",
+                image: "/images/aboutus/male1.jpg",
               },
               {
                 name: "Ibtissam Abdalawy",
@@ -409,21 +408,21 @@ const AboutUs = () => {
               },
               {
                 name: "Racheal Tracy Mantongo",
-                role: "Sales",
-                bio: "Dynamic sales professional with expertise in client engagement and business growth.",
-                image: "/images/aboutus/profile5.webp",
+                role: "Consulting Agent",
+                bio: "Dynamic consulting agent with expertise in client engagement and business growth.",
+                image: "/images/aboutus/female3.jpg",
               },
               {
                 name: "Ahmed Neji Hamrouni",
-                role: "Sales Team Leader",
-                bio: "Experienced team leader driving sales excellence and team performance.",
-                image: "/images/aboutus/profile6.webp",
+                role: "Consulting Agent",
+                bio: "Experienced consulting agent driving sales excellence and team performance.",
+                image: "/images/aboutus/male2.jpg",
               },
               {
                 name: "Mhamed Najem",
-                role: "Sales",
-                bio: "Skilled sales professional dedicated to providing outstanding customer experiences.",
-                image: "/images/aboutus/profile7.webp",
+                role: "Consulting Agent",
+                bio: "Skilled consulting agent dedicated to providing outstanding customer experiences.",
+                image: "/images/aboutus/male3.avif",
               },
             ].map((member, index) => (
               <motion.div
@@ -433,20 +432,19 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
               >
-                <div className="relative mx-auto mb-4 h-36 w-36 overflow-hidden rounded-full bg-gradient-to-br from-primary-400 to-secondary-400 p-1 shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl">
+                <div className="relative mx-auto mb-4 h-36 w-36 overflow-hidden rounded-full bg-gradient-to-br from-primary-400 to-secondary-400 p-1 shadow-lg">
                   <div className="h-full w-full overflow-hidden rounded-full bg-white">
                     <LazyImage
                       src={member.image}
                       alt={member.name}
-                      className="h-full w-full object-cover object-[center_25%] transition-transform duration-300 group-hover:scale-110"
+                      className="h-full w-full object-cover object-[center_25%]"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-gray-800 transition-colors duration-300 group-hover:text-primary-600">
+                  <h3 className="text-lg font-bold text-gray-800">
                     {member.name}
                   </h3>
                   <div className="flex items-center justify-center space-x-2">
